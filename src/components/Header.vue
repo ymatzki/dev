@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img class="img-fluid" src="header.jpg">
+    <img class="img-fluid" src="coast.jpg">
   </div>
 </template>
 

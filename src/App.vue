@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="font">
-    <div class="row">
-      <nav class="col-2 bg-light sidebar">
+  <div id="app" class="font row m-0">
+    <div class="col-2 bg-light sidebar">
+      <nav>
         <div class="sidebar-sticky">
           <img src="image.jpg" class="rounded-circle img-thumbnail">
           <div class="pt-5">
@@ -11,9 +11,12 @@
           </div>
         </div>
       </nav>
-      <main class="col p-0" role="main">
+    </div>
+    <div class="col-10 px-0">
+      <main role="main">
         <div class="header"><Header /></div>
         <div class="content"><About /></div>
+        <div class="footer"><Footer /></div>
       </main>
     </div>
   </div>
@@ -22,12 +25,14 @@
 <script>
 import About from './components/About.vue'
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
   components: {
     About,
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -36,6 +41,7 @@ export default {
   .font {
     font-family: "Times New Roman", Times, serif;
   }
+
   .sidebar {
     position: fixed;
     top: 0;
@@ -43,9 +49,7 @@ export default {
     left: 0;
     z-index: 100;
     padding: 48px;
-    box-shadow: inset -1px 0 0
-
-    rgba(0, 0, 0, .1);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
   }
 
   .sidebar-sticky {
@@ -57,7 +61,7 @@ export default {
     overflow-y: auto;
   }
 
-  .toc{
+  .toc {
 
   }
 
@@ -66,5 +70,14 @@ export default {
 
   .content{
     padding: 24px;
+  }
+
+  .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #f5f5f5;
+      box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
   }
 </style>
