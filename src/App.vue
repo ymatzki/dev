@@ -5,37 +5,33 @@
         <div class="sidebar-sticky">
           <img src="image.jpg" class="rounded-circle img-thumbnail">
           <div class="pt-5">
-          <ul>
-            <li><a href="/">About me</a></li>
-          </ul>
+            <ul>
+              <li><a href="/">About me</a></li>
+            </ul>
           </div>
         </div>
       </nav>
     </div>
     <div class="col-10 px-0">
       <main role="main">
-        <div class="header"><Header /></div>
-        <div class="content"><About /></div>
-        <div class="footer"><Footer /></div>
+        <router-view/>
       </main>
+      <div class="footer"><Footer /></div>
     </div>
   </div>
 </template>
 
 <script>
-import About from './components/About.vue'
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+  import Footer from './components/Footer.vue'
 
-export default {
-  name: 'app',
-  components: {
-    About,
-    Header,
-    Footer
+  export default {
+    name: 'app',
+    components: {
+      Footer
+    }
   }
-}
 </script>
+
 
 <style>
   .font {
@@ -61,10 +57,6 @@ export default {
     overflow-y: auto;
   }
 
-  .toc {
-
-  }
-
   .header {
   }
 
@@ -73,11 +65,12 @@ export default {
   }
 
   .footer {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 60px;
-      background-color: #f5f5f5;
-      box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
   }
 </style>
+
