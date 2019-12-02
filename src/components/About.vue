@@ -4,7 +4,7 @@
     <p>
       I'm a software engineer.<br/>
     </p>
-    <h2>Habit</h2>
+    <h2>Hobbies</h2>
     <ul>
       <li>Create something I want.</li>
       <li>Jogging.</li>
