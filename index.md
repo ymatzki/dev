@@ -4,7 +4,7 @@ I'm a software engineer.
 
 - I create something I want.
 - I like jogging.
-- I love to Listen to Podcast.
+- I love to listen to Podcast.
 
 ## Portfolio
 
